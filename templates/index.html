@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Image Comparison</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-pair {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .image-pair div {
+            margin: 0 15px;
+            text-align: center;
+        }
+        .image-pair img {
+            max-width: 400px;
+            max-height: 400px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generated vs Annotated Detections</h1>
+        {% for file in files %}
+        <div class="image-pair">
+            <div>
+                <h3>Generated: {{ file }}</h3>
+                <img src="{{ url_for('generated_image', filename=file) }}" alt="Generated image">
+            </div>
+            <div>
+                <h3>Annotated: {{ file }}</h3>
+                <img src="{{ url_for('annotated_image', filename=file) }}" alt="Annotated image">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
