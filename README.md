@@ -36,7 +36,7 @@ This repository contains a project developed as part of my research tryout. The 
 ## Setup & Installation
 
 1. Run the pipline.ipynb on colab. (https://colab.research.google.com/drive/1oGQG7FzpXmFA8-33w2mpykAx8PrWKI9X?usp=sharing)
-2. Run the app.py after cloning the repo to see diffrences side by side.
+2. Run the app.py after cloning the repo to see differences side by side.
 
  ```bash
    git clone https://github.com/Ayush971107/research-tryout.git
