@@ -4,8 +4,8 @@ import os
 app = Flask(__name__)
 
 # Define absolute paths to your image folders
-GENERATED_FOLDER = os.path.join(os.getcwd(), "generated_images")
-ANNOTATED_FOLDER = os.path.join(os.getcwd(), "Annotated2")
+GENERATED_FOLDER = os.path.join(os.getcwd(), "sample_generated")
+ANNOTATED_FOLDER = os.path.join(os.getcwd(), "sample_annotations")
 
 @app.route('/')
 def index():
